@@ -8,6 +8,8 @@
 
 #include "Worker_hourly_salary.h"
 
+const std::string Signature_hours = "Hourly salary";
+
 Worker_hourly_salary::Worker_hourly_salary(const std::string& name, const std::string& position, const double& hourly_rate): Worker(name, position), hourly_rate(hourly_rate){
     
     salary =  hourly_rate * WORK_HOURS * MONTH_WORKING_DAYS;

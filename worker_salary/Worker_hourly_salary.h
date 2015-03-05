@@ -15,7 +15,6 @@
 
 const double MONTH_WORKING_DAYS = 20.8;
 const int WORK_HOURS = 8;
-const std::string Signature_hours = "Hourly salary";
 
 class Worker_hourly_salary : public Worker{
 public:

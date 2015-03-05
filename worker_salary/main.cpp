@@ -15,12 +15,11 @@
 #include <assert.h>
 int main(int argc, const char * argv[]) {
     
-    
     Worker_group workers;
     
-    assert(argc > 2);
+    assert(argc > 1);
     std::string in_file = argv[1];
-    std::string out_file = argv[2];
+    std::string out_file = (argc>2) ? argv[2] : in_file;
     
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;

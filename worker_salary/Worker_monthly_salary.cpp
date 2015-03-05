@@ -7,6 +7,7 @@
 //
 
 #include "Worker_monthly_salary.h"
+const std::string Signature_month = "Monthly salary";
 
 Worker_monthly_salary::Worker_monthly_salary(const std::string& name, const std::string& position, const double& salary): Worker(name, position), salary(salary){}
 void Worker_monthly_salary::print(std::ostream& os)const{
