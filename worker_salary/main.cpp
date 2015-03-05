@@ -25,6 +25,7 @@ int main(int argc, const char * argv[]) {
     readFromFile(workers, filename);
     std::cout << filename;
     
+    
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;
     std::cout << "Task 1: Sort by salary, if salary equal, sort by names: " << std::endl;

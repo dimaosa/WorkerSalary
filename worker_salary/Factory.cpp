@@ -37,7 +37,6 @@ bool validateWorker(const std::vector<std::string>& worker){
     
     if (worker.empty() || worker.size() > 6) return false;
     else return true;
-    
 }
 void createWorker(Worker_group& workers, const std::vector<std::string>& worker){
     
@@ -45,8 +44,7 @@ void createWorker(Worker_group& workers, const std::vector<std::string>& worker)
         if (std::strstr(worker[0].c_str(), "Hourly") != NULL) {
             Worker_ptr wrkr (new Worker_hourly_salary(worker[1], worker[2], convertToDouble(worker[3])));
             workers.add(wrkr);
-        }
-        else if(std::strstr(worker[0].c_str(), "Monthly") != NULL){
+        }else if(std::strstr(worker[0].c_str(), "Monthly") != NULL){
             Worker_ptr wrkr (new Worker_monthly_salary(worker[1], worker[2], convertToDouble(worker[3])));
             workers.add(wrkr);
         }

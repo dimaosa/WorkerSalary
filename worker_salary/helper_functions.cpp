@@ -19,8 +19,7 @@ bool compareSalary(const Worker_ptr wrkr1, const Worker_ptr wrkr2){
 bool compareWorkers (const Worker_ptr wrkr1, const Worker_ptr wrkr2) {
     if(wrkr1->getSalary() == wrkr2->getSalary()){
         return compareNames(wrkr1, wrkr2);
-    }
-    else{
+    }else{
         return compareSalary(wrkr1, wrkr2);
     }
 }
