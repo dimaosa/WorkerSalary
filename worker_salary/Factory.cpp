@@ -38,11 +38,9 @@ void createWorker(Worker_group& workers, const std::vector<std::string>& worker)
     
     if (!worker.empty()) {
         if (Worker_hourly_salary::match(worker[0])) {
-            Worker_ptr wrkr (new Worker_hourly_salary(worker[1], worker[2], convertToDouble(worker[3])));
-            workers.add(wrkr);
+            workers.add(Worker_hourly_salary::create(worker));
         }else if(Worker_monthly_salary::match(worker[0])){
-            Worker_ptr wrkr (new Worker_monthly_salary(worker[1], worker[2], convertToDouble(worker[3])));
-            workers.add(wrkr);
+            workers.add(Worker_monthly_salary::create(worker));
         }
     }else{
         std::cerr << "Invalid worker input";

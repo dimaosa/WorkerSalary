@@ -10,6 +10,8 @@
 #define __worker_salary__Worker_monthly_salary__
 
 #include "Worker.h"
+#include <vector>
+#include "helper_functions.h"
 
 class Worker_monthly_salary : public Worker{
 protected:
@@ -21,6 +23,8 @@ public:
     void print(std::ostream&)const;
     
     static bool match(const std::string& signature);
+    
+    static Worker_ptr create(const std::vector<std::string>& worker);
 };
 
 

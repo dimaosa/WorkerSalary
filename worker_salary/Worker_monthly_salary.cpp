@@ -24,3 +24,7 @@ double Worker_monthly_salary::getSalary() const{
 bool Worker_monthly_salary::match(const std::string& signature){
     return signature.find("Monthly") == 0;
 }
+
+Worker_ptr Worker_monthly_salary::create(const std::vector<std::string>& worker){
+    return Worker_ptr(new Worker_monthly_salary(worker[1], worker[2], convertToDouble(worker[3])));
+}

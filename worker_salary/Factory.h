@@ -17,11 +17,6 @@
 #include <sstream>
 #include <ostream>
 #include <fstream>
-enum WorkerType{
-    mouthly=0,
-    hourly=1
-};
-
 
 void save2file(const Worker_group&, const std::string&);
 void readFromFile(Worker_group&, const std::string&);

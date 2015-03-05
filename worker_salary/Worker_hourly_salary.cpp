@@ -10,7 +10,7 @@
 
 Worker_hourly_salary::Worker_hourly_salary(const std::string& name, const std::string& position, const double& hourly_rate): Worker(name, position), hourly_rate(hourly_rate){
     
-    salaryUpdate();
+    salary =  hourly_rate * WORK_HOURS * MONTH_WORKING_DAYS;
 }
 
 void Worker_hourly_salary::print(std::ostream& os)const{
@@ -26,10 +26,11 @@ void Worker_hourly_salary::print(std::ostream& os)const{
 double Worker_hourly_salary::getSalary() const{
     return salary;
 }
-void Worker_hourly_salary::salaryUpdate(){
-    salary =  hourly_rate * WORK_HOURS * MONTH_WORKING_DAYS;
-}
 
 bool Worker_hourly_salary::match(const std::string& signature){
     return signature.find("Hourly") == 0;
+}
+
+Worker_ptr Worker_hourly_salary::create(const std::vector<std::string>& worker){
+    return Worker_ptr(new Worker_hourly_salary(worker[1], worker[2], convertToDouble(worker[3])));
 }

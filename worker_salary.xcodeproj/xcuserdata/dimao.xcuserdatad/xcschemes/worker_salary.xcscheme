@@ -62,6 +62,10 @@
             argument = "&quot;/Users/dimao/Documents/Programming/worker_salary/out.txt&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/dimao/Documents/Programming/worker_salary/out.txt&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
