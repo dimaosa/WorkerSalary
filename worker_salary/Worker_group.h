@@ -23,17 +23,19 @@ public:
     
     void print(std::ostream&)const;
     
-    void add(std::shared_ptr<Worker>);
+    void add(Worker_ptr);
     void removeWorker(int);
     void removeWorker();
     
     void sortBySalary();
     
-    void printFirst5(std::ostream&);
-    void printLast3(std::ostream&);
+    void printFirst(std::ostream&, int count);
+    void printLast(std::ostream&, int count);
     
 protected:
-    typedef std::list<std::shared_ptr<Worker>> WorkerList;
+    //Worker_ptr in helper_functions.h
+    typedef std::list<Worker_ptr> WorkerList;
+ 
     WorkerList workers;
 };
 

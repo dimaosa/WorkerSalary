@@ -34,14 +34,14 @@ int main(int argc, const char * argv[]) {
     
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;
-    std::cout << "Task 2: Show first five  " << std::endl;
-    workers.printFirst5(std::cout);
+    std::cout << "Task 2: Show first 5  " << std::endl;
+    workers.printFirst(std::cout, 5);
     
 
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;
     std::cout << "Task 3: Show Last 3" << std::endl;
-    workers.printLast3(std::cout);
+    workers.printLast(std::cout, 3);
 
     
     std::cout << std::endl;

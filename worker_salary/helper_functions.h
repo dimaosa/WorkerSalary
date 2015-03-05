@@ -14,10 +14,11 @@
 #include <sstream>
 #include <algorithm>
 
+typedef std::shared_ptr<Worker> Worker_ptr;
 
-bool compareNames(const std::shared_ptr<Worker> wrkr1, const std::shared_ptr<Worker> wrkr2);
-bool compareSalary(const std::shared_ptr<Worker> wrkr1, const std::shared_ptr<Worker> wrkr2);
-bool compareWorkers (const std::shared_ptr<Worker> wrkr1, const std::shared_ptr<Worker> wrkr2);
+bool compareNames(const Worker_ptr wrkr1, const Worker_ptr wrkr2);
+bool compareSalary(const Worker_ptr wrkr1, const Worker_ptr wrkr2);
+bool compareWorkers (const Worker_ptr wrkr1, const Worker_ptr wrkr2);
 
 
 class BadConversion : public std::runtime_error {

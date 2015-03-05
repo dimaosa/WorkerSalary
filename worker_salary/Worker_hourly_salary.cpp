@@ -15,9 +15,12 @@ Worker_hourly_salary::Worker_hourly_salary(const std::string& name, const std::s
 
 void Worker_hourly_salary::print(std::ostream& os)const{
     
-    os << "Hourly salary" << "," << name << ","
-    << position << "," << hourly_rate
-    << "," << salary <<  std::endl;
+    os << "Hourly salary" << ","
+    << name << ","
+    << position << ","
+    << hourly_rate << ","
+    << salary
+    <<  std::endl;
 }
 
 double Worker_hourly_salary::getSalary() const{

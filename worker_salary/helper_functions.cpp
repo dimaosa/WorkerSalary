@@ -8,14 +8,15 @@
 
 #include "helper_functions.h"
 
-bool compareNames(const std::shared_ptr<Worker> wrkr1, const std::shared_ptr<Worker> wrkr2){
+
+bool compareNames(const Worker_ptr wrkr1, const Worker_ptr wrkr2){
     return wrkr1->name.compare(wrkr2->name) < 0;
 }
-bool compareSalary(const std::shared_ptr<Worker> wrkr1, const std::shared_ptr<Worker> wrkr2){
+bool compareSalary(const Worker_ptr wrkr1, const Worker_ptr wrkr2){
     return wrkr1->getSalary() > wrkr2->getSalary();
 }
 
-bool compareWorkers (const std::shared_ptr<Worker> wrkr1, const std::shared_ptr<Worker> wrkr2) {
+bool compareWorkers (const Worker_ptr wrkr1, const Worker_ptr wrkr2) {
     if(wrkr1->getSalary() == wrkr2->getSalary()){
         return compareNames(wrkr1, wrkr2);
     }
