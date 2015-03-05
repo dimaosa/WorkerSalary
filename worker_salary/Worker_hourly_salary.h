@@ -11,14 +11,18 @@
 
 #include "Worker.h"
 
+const double MONTH_WORKING_DAYS = 20.8;
+const int WORK_HOURS = 8;
+
+
 class Worker_hourly_salary : public Worker{
 public:
     
     Worker_hourly_salary(const std::string&, const std::string&, const double&);
     
-    void print(std::ostream&)const;
-    
     double getSalary() const;
+    
+    void print(std::ostream&)const;
     
     void salaryUpdate();
     

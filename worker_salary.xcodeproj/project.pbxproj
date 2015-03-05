@@ -13,7 +13,6 @@
 		D24E95491AA7112D00D99E53 /* Worker_group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24E95471AA7112D00D99E53 /* Worker_group.cpp */; };
 		D24E954C1AA73BB100D99E53 /* helper_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24E954A1AA73BB100D99E53 /* helper_functions.cpp */; };
 		D2B048551AA5FAFA0055A754 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2B048541AA5FAFA0055A754 /* main.cpp */; };
-		D2B0485D1AA5FB2C0055A754 /* Worker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2B0485B1AA5FB2C0055A754 /* Worker.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +40,6 @@
 		D24E954B1AA73BB100D99E53 /* helper_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helper_functions.h; sourceTree = "<group>"; };
 		D2B048511AA5FAFA0055A754 /* worker_salary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = worker_salary; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B048541AA5FAFA0055A754 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D2B0485B1AA5FB2C0055A754 /* Worker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Worker.cpp; sourceTree = "<group>"; };
 		D2B0485C1AA5FB2C0055A754 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				D2B048541AA5FAFA0055A754 /* main.cpp */,
-				D2B0485B1AA5FB2C0055A754 /* Worker.cpp */,
 				D2B0485C1AA5FB2C0055A754 /* Worker.h */,
 				D24E953E1AA6DFED00D99E53 /* Worker_monthly_salary.cpp */,
 				D24E953F1AA6DFED00D99E53 /* Worker_monthly_salary.h */,
@@ -152,7 +149,6 @@
 				D24E95401AA6DFED00D99E53 /* Worker_monthly_salary.cpp in Sources */,
 				D24E95461AA7110400D99E53 /* Factory.cpp in Sources */,
 				D2B048551AA5FAFA0055A754 /* main.cpp in Sources */,
-				D2B0485D1AA5FB2C0055A754 /* Worker.cpp in Sources */,
 				D24E95491AA7112D00D99E53 /* Worker_group.cpp in Sources */,
 				D24E954C1AA73BB100D99E53 /* helper_functions.cpp in Sources */,
 			);

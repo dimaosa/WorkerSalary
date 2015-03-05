@@ -19,16 +19,18 @@ class Worker_group : public Worker {
 public:
     ~Worker_group();
     
+    double getSalary()const{return 0;}
+    
+    void print(std::ostream&)const;
+    
     void add(std::shared_ptr<Worker>);
     void removeWorker(int);
     void removeWorker();
-    void print(std::ostream&)const;
+    
     void sortBySalary();
     
     void printFirst5(std::ostream&);
     void printLast3(std::ostream&);
-    
-    double getSalary()const{return 0;}
     
 protected:
     typedef std::list<std::shared_ptr<Worker>> WorkerList;

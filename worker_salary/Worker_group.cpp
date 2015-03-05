@@ -11,7 +11,7 @@
 Worker_group::~Worker_group(){}
 
 void Worker_group::add(std::shared_ptr<Worker> worker){
-    Worker_group::workers.push_back(worker);
+    workers.push_back(worker);
 }
 void Worker_group::removeWorker(int pos){
     try {
@@ -26,7 +26,7 @@ void Worker_group::removeWorker(int pos){
 }
 void Worker_group::removeWorker(){
     try {
-        Worker_group::workers.pop_back();
+        workers.pop_back();
     } catch (const std::out_of_range& oor) {
         std::cerr << "Out of range error: " << oor.what() << std::endl;
     }

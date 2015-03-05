@@ -16,11 +16,10 @@ protected:
     double salary;
 public:
     Worker_monthly_salary(const std::string&, const std::string&, const double&);
-    
-    void print(std::ostream&)const;
 
     double getSalary() const;
 
+    void print(std::ostream&)const;
 };
 
 
