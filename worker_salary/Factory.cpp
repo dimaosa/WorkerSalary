@@ -36,7 +36,7 @@ void readFromFile(Worker_group& workers, const std::string& filename){
 
 void createWorker(Worker_group& workers, const std::vector<std::string>& worker){
     
-    if (!worker.empty() || worker.size() < MAX_ARGC) {
+    if (!worker.empty()) {
         if (Worker_hourly_salary::match(worker[0])) {
             Worker_ptr wrkr (new Worker_hourly_salary(worker[1], worker[2], convertToDouble(worker[3])));
             workers.add(wrkr);

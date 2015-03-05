@@ -22,7 +22,6 @@ enum WorkerType{
     hourly=1
 };
 
-static const int MAX_ARGC = 6;
 
 void save2file(const Worker_group&, const std::string&);
 void readFromFile(Worker_group&, const std::string&);

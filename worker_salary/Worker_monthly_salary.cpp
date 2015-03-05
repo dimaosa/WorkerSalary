@@ -22,5 +22,5 @@ double Worker_monthly_salary::getSalary() const{
     return salary;
 }
 bool Worker_monthly_salary::match(const std::string& signature){
-    return (std::strstr(signature.c_str(), "Monthly"));
+    return signature.find("Monthly") == 0;
 }

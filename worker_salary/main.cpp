@@ -19,12 +19,13 @@ int main(int argc, const char * argv[]) {
     Worker_group workers;
     
     assert(argc > 1);
-    std::string filename = argv[1];
+    std::string in_file = argv[1];
+    std::string out_file = in_file;
     
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;
     std::cout << "Task 5: Read from file" << std::endl;
-    readFromFile(workers, filename);
+    readFromFile(workers, in_file);
     std::cout << filename;
     
     
@@ -50,7 +51,7 @@ int main(int argc, const char * argv[]) {
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;
     std::cout << "Task 4: Save to file" << std::endl;
-    save2file(workers, filename);
+    save2file(workers, out_file);
     std::cout << filename;
     
     return 0;

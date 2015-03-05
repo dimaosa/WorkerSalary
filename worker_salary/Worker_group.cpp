@@ -22,7 +22,7 @@ void Worker_group::removeWorker(int pos){
     }
 }
 void Worker_group::removeWorker(){
-    if (workers.size()) {
+    if (!workers.empty()) {
         workers.pop_back();
     }else{
         std::cout << "Nothing to delete from list";

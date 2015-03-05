@@ -31,5 +31,5 @@ void Worker_hourly_salary::salaryUpdate(){
 }
 
 bool Worker_hourly_salary::match(const std::string& signature){
-    return (std::strstr(signature.c_str(), "Hourly"));
+    return signature.find("Hourly") == 0;
 }
