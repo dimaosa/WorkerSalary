@@ -11,6 +11,8 @@
 void save2file(const Worker_group& workers, const std::string& filename){
     
     std::ofstream out(filename, std::ofstream::binary);
+    
+    //writitng all workers to file
     workers.print(out);
     out.close();
 }
@@ -18,7 +20,10 @@ void readFromFile(Worker_group& workers, const std::string& filename){
     
     std::ifstream in_file(filename);
     std::string line;
+    
+    //part_str - every element in line
     std::string part_str;
+    
     std::vector<std::string> worker;
     
     if (in_file.is_open()) {
@@ -28,6 +33,7 @@ void readFromFile(Worker_group& workers, const std::string& filename){
             while (std::getline(ss, part_str, ',')) {
                 worker.push_back(part_str);
             }
+            //create worker and added it to a list of workers
             createWorker(workers, worker);
             worker.clear();
         }

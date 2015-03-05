@@ -13,6 +13,8 @@
 #include <vector>
 #include "helper_functions.h"
 
+const std::string Signature_month = "Monthly salary";
+
 class Worker_monthly_salary : public Worker{
 protected:
     double salary;

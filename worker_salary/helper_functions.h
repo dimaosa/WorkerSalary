@@ -18,9 +18,10 @@ typedef std::shared_ptr<Worker> Worker_ptr;
 
 bool compareNames(const Worker_ptr wrkr1, const Worker_ptr wrkr2);
 bool compareSalary(const Worker_ptr wrkr1, const Worker_ptr wrkr2);
+
 bool compareWorkers (const Worker_ptr wrkr1, const Worker_ptr wrkr2);
 
-
+//if conversation from string to double wrong, show error
 class BadConversion : public std::runtime_error {
 public:
     BadConversion(const std::string& s)

@@ -20,6 +20,8 @@ public:
     Worker(const std::string& name, const std::string& position): name(name), position(position){}
     virtual ~Worker(){};
     
+    
+    
     virtual double getSalary()const=0;
     virtual void print(std::ostream&)const=0;
     

@@ -13,6 +13,7 @@ void Worker_group::add(Worker_ptr worker){
     workers.push_back(worker);
 }
 void Worker_group::removeWorker(int pos){
+    
     if (pos > 0 && pos <= workers.size()) {
         typename WorkerList::iterator it = workers.begin();
         std::advance(it, pos);
@@ -30,6 +31,7 @@ void Worker_group::removeWorker(){
 }
 void Worker_group::printFirst(std::ostream& os, int count){
     
+    //if count is bigger than elements in workers, it shows all workers
     int step = count;
     if (step > 0) {
         
@@ -44,6 +46,8 @@ void Worker_group::printFirst(std::ostream& os, int count){
     }
 }
 void Worker_group::printLast(std::ostream& os, int count){
+    
+    //if count is bigger than elements in workers, it shows all workers
     int step;
     if (step > 0) {
         step = count;
@@ -66,6 +70,7 @@ void Worker_group::print(std::ostream& os)const{
 }
 void Worker_group::sortBySalary(){
     
+    //compare by salary, if salary equal, compare by names, descend order
     workers.sort(compareWorkers);
     
 }

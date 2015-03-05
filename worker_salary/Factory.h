@@ -20,5 +20,6 @@
 
 void save2file(const Worker_group&, const std::string&);
 void readFromFile(Worker_group&, const std::string&);
+
 void createWorker(Worker_group&, const std::vector<std::string>&);
 #endif /* defined(__worker_salary__Factory__) */

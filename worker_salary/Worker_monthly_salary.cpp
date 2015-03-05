@@ -11,7 +11,7 @@
 Worker_monthly_salary::Worker_monthly_salary(const std::string& name, const std::string& position, const double& salary): Worker(name, position), salary(salary){}
 void Worker_monthly_salary::print(std::ostream& os)const{
     
-    os << "Monthly salary"<< ","
+    os << Signature_month << ","
     << name << ","
     << position << ","
     << salary
@@ -22,7 +22,7 @@ double Worker_monthly_salary::getSalary() const{
     return salary;
 }
 bool Worker_monthly_salary::match(const std::string& signature){
-    return signature.find("Monthly") == 0;
+    return signature.find(Signature_month) == 0;
 }
 
 Worker_ptr Worker_monthly_salary::create(const std::vector<std::string>& worker){
