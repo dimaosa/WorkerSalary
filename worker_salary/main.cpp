@@ -12,12 +12,14 @@
 #include "Worker.h"
 #include "Worker_group.h"
 #include "Factory.h"
-
+#include <assert.h>
 int main(int argc, const char * argv[]) {
     
     
     Worker_group workers;
-    std::string filename = "/Users/dimao/Documents/Programming/worker_salary/out.txt";
+    
+    assert(argc > 1);
+    std::string filename = argv[1];
     
     std::cout << std::endl;
     std::cout << "-------------------" << std::endl;
