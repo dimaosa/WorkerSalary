@@ -12,6 +12,8 @@
 bool compareNames(const Worker_ptr wrkr1, const Worker_ptr wrkr2){
     return wrkr1->name.compare(wrkr2->name) < 0;
 }
+
+// descending order
 bool compareSalary(const Worker_ptr wrkr1, const Worker_ptr wrkr2){
     return wrkr1->getSalary() > wrkr2->getSalary();
 }

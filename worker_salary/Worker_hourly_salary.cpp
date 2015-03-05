@@ -29,3 +29,7 @@ double Worker_hourly_salary::getSalary() const{
 void Worker_hourly_salary::salaryUpdate(){
     salary =  hourly_rate * WORK_HOURS * MONTH_WORKING_DAYS;
 }
+
+bool Worker_hourly_salary::match(const std::string& signature){
+    return (std::strstr(signature.c_str(), "Hourly"));
+}

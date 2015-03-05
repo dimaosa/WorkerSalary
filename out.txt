@@ -3,4 +3,5 @@ Hourly salary,Davib,Web Desighner,10,1664
 Hourly salary,Davic,Web Desighner,10,1664
 Hourly salary,David,Web Desighner,10,1664
 Monthly salary,John,Developer,1458
+Monthly salary, Hourly, PM,1340
 Monthly salary,Dow,Cleaner,1000

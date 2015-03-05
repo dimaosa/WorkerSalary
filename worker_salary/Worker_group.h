@@ -20,7 +20,6 @@ public:
     ~Worker_group();
     
     double getSalary()const{return 0;}
-    
     void print(std::ostream&)const;
     
     void add(Worker_ptr);
@@ -35,7 +34,6 @@ public:
 protected:
     //Worker_ptr in helper_functions.h
     typedef std::list<Worker_ptr> WorkerList;
- 
     WorkerList workers;
 };
 

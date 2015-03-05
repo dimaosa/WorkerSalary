@@ -18,8 +18,9 @@ public:
     Worker_monthly_salary(const std::string&, const std::string&, const double&);
 
     double getSalary() const;
-
     void print(std::ostream&)const;
+    
+    static bool match(const std::string& signature);
 };
 
 

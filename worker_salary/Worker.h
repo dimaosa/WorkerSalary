@@ -21,10 +21,7 @@ public:
     virtual ~Worker(){};
     
     virtual double getSalary()const=0;
-    
     virtual void print(std::ostream&)const=0;
-    
-    
     
 };
 

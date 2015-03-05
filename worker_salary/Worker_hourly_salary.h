@@ -26,6 +26,8 @@ public:
     
     void salaryUpdate();
     
+    static bool match(const std::string& signature);
+    
 private:
     double hourly_rate;
     double salary;

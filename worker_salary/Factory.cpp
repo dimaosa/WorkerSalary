@@ -33,18 +33,14 @@ void readFromFile(Worker_group& workers, const std::string& filename){
         }
     }
 }
-bool validateWorker(const std::vector<std::string>& worker){
-    
-    if (worker.empty() || worker.size() > 6) return false;
-    else return true;
-}
+
 void createWorker(Worker_group& workers, const std::vector<std::string>& worker){
     
-    if (validateWorker(worker)) {
-        if (std::strstr(worker[0].c_str(), "Hourly") != NULL) {
+    if (!worker.empty() || worker.size() < MAX_ARGC) {
+        if (Worker_hourly_salary::match(worker[0])) {
             Worker_ptr wrkr (new Worker_hourly_salary(worker[1], worker[2], convertToDouble(worker[3])));
             workers.add(wrkr);
-        }else if(std::strstr(worker[0].c_str(), "Monthly") != NULL){
+        }else if(Worker_monthly_salary::match(worker[0])){
             Worker_ptr wrkr (new Worker_monthly_salary(worker[1], worker[2], convertToDouble(worker[3])));
             workers.add(wrkr);
         }
