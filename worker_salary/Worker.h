@@ -11,7 +11,7 @@
 
 #include <string>
 #include <ostream>
-
+#include <functional>
 class Worker{
 public:
     std::string name;

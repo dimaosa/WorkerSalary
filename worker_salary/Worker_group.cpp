@@ -40,9 +40,9 @@ void Worker_group::printFirst(std::ostream& os, int count){
         }
         typename WorkerList::iterator it_stop = workers.begin();
         std::advance(it_stop, step);
-        for (typename WorkerList::iterator it = workers.begin(); it != it_stop; it++) {
-            os << (*it)->name << std::endl;
-        }
+        std::for_each(workers.begin(), it_stop, [&] (Worker_ptr worker){
+            os << worker->name << std::endl;
+        });
     }
 }
 void Worker_group::printLast(std::ostream& os, int count){
@@ -56,17 +56,12 @@ void Worker_group::printLast(std::ostream& os, int count){
         }
         typename WorkerList::iterator it = workers.begin();
         std::advance(it, workers.size() - step);
-        do{
-            (*it)->print(os);
-            it++;
-        }while(it != workers.end());
+        std::for_each(it, workers.end(), PrintIt<std::ostream>(os));
     }
 }
 void Worker_group::print(std::ostream& os)const{
     
-    for (auto i : workers) {
-        i->print(os);
-    }
+    std::for_each(workers.begin(), workers.end(), PrintIt<std::ostream>(os));
 }
 void Worker_group::sortBySalary(){
     

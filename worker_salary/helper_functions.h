@@ -37,4 +37,16 @@ inline double convertToDouble(const std::string& s)
     }
     return x;
 }
+
+//define own functor for Worker::print in for_each
+template <typename T>
+class PrintIt {
+    T& os;
+    
+public:
+    explicit PrintIt (T& x): os(x){}
+    void operator ()(Worker_ptr wrkr) const {
+        wrkr->print(os);
+    }
+};
 #endif /* defined(__worker_salary__helper_functions__) */
